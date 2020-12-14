@@ -91,11 +91,22 @@ const makeBoard = (width, height) => {
         for (let k = 0; k < width; k++) {
             board += generateRandomCell();
         }
-        board += "\n";
+        board += '\n';
     }
     console.log(board);
+    return board;
 }
 
 const generateRandomCell = () => Math.round(Math.random());
 
 makeBoard(6, 3);
+
+const makeNextStep = board => {
+    for (let i = 0; i < board.length; i++) {
+
+        console.log(board[i]);
+    }
+    console.log(board);
+}
+
+makeNextStep(makeBoard(6, 3));
